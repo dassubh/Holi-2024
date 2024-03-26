@@ -15,13 +15,12 @@ document.addEventListener('mousemove', function(e) {
     splash.style.height = '200px';
     splash.style.pointerEvents = 'none';
 
-    // Exclude dark colors
     let hue, saturation, brightness;
     do {
       hue = getRandomDegrees();
-      saturation = getRandomPercentage() * 0.75 + 0.25; // Ensure minimum saturation of 25%
-      brightness = getRandomPercentage() * 0.5 + 0.5; // Ensure minimum brightness of 50%
-    } while (brightness < 0.6); // Exclude dark colors (brightness < 60%)
+      saturation = getRandomPercentage() * 0.75 + 0.25; 
+      brightness = getRandomPercentage() * 0.5 + 0.5; 
+    } while (brightness < 0.6); 
 
     splash.style.filter = `
       hue-rotate(${hue}deg)
@@ -44,5 +43,5 @@ function getRandomDegrees() {
 }
 
 function getRandomPercentage() {
-  return Math.random() * 2; // Random value between 0 and 2
+  return Math.random() * 2; 
 }
